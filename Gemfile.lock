@@ -113,7 +113,6 @@ GEM
     nio4r (2.5.1)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
-    oauth (0.5.4)
     oauth2 (1.4.1)
       faraday (>= 0.8, < 0.16.0)
       jwt (>= 1.0, < 3.0)
@@ -197,7 +196,6 @@ GEM
     simple_form (4.1.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
-    simple_oauth (0.3.1)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -233,15 +231,6 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
-    youtube_it (2.1.1)
-      builder
-      faraday
-      faraday (>= 0.7.3)
-      nokogiri
-      oauth
-      oauth (>= 0.4.4)
-      simple_oauth
-      simple_oauth (>= 0.1.5)
 
 PLATFORMS
   ruby
@@ -270,7 +259,6 @@ DEPENDENCIES
   uglifier
   web-console (>= 3.3.0)
   webpacker
-  youtube_it
 
 RUBY VERSION
    ruby 2.6.3p62
