@@ -1,0 +1,41 @@
+<%= render 'shared/banner' %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12">
+
+      <%= render 'shared/tabs' %>
+      <% if @user.spotify_credentials %>
+
+        <div class="app">
+          <h5>Top artists</h5>
+          <ul class="hs full">
+          <% @top_artists.each do |artist| %>
+            <div>
+              <li class="item" style="background-image: url('<%= artist.images[0]['url'] %>'); height: 90%">
+              </li>
+              <%= artist.name %>
+            </div>
+          <% end %>
+          </ul>
+        </div>
+
+        <div class="app">
+          <h5>Top tracks</h5>
+          <ul class="hs full">
+          <% @top_tracks.each do |track| %>
+            <div>
+              <li class="item" style="background-image: url('<%= track.album.images[0]['url'] %>'); height: 90%">
+              </li>
+              <%= track.name %>
+            </div>
+          <% end %>
+          </ul>
+        </div>
+      <% else %>
+        <h2>No Spotify account</h2>
+      <% end %>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<%= render 'shared/banner' %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12">
+
+      <%= render 'shared/tabs' %>
+      <div class="jumbotron">
+        <div class="container">
+          <h4>Share your videos with the world!</h4>
+
+
+            <%= form_for [@user, @video] do |f| %>
+              <%= render 'shared/errors', object: @video %>
+
+
+                <div class="input-group mb-3">
+                  <%= f.text_field :link, class: 'form-control', required: true, placeholder: "Youtube link" %>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">Add video now!</button>
+                  </div>
+                </div>
+            <% end %>
+
+        </div>
+      </div>
+      <div class="video-feed d-flex flex-column">
+        <h5 class="mb-2 text-center" style="text-transform: uppercase;"><%= @user.first_name %>'s videos</h5>
+        <% @videos.each do |video| %>
+          <div class="align-self-center">
+            <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/<%= video.uid %>" frameborder="0"></iframe>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
