@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 mt-4">
+      <div style="height: 40px;">
+        <%= render '/shared/search' %>
+      </div>
+
+      <% @users.each do |user| %>
+        <%= link_to user_path(user), class: "nodecor" do%>
+          <div class="card-user">
+            <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" />
+            <div class="card-user-infos">
+              <div>
+                <h2><%= user.first_name %>, <%= user.age %></h2>
+                <p>
+                  <i class="fas fa-guitar"></i>
+                  <i class="fas fa-drum"></i>
+                  <i class="fas fa-microphone"></i>
+                </p>
+              </div>
+              <h2 class="card-user-genres">rock - indie - alternative </h2>
+              <img src="https://avatars1.githubusercontent.com/u/30637046?v=4" class="card-user avatar-bordered" />
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+
+
+

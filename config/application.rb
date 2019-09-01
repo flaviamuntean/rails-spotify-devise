@@ -22,3 +22,5 @@ module RailsSpotifyDevise
     # the framework and any gems in your application.
   end
 end
+
+RSpotify::authenticate("9c5beb3b814847b8a6978011487d8fc8", "64d1e9b8ada542baaa49e41bd2db6a0d")

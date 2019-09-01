@@ -1,0 +1,53 @@
+.card-user {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-decoration: none;
+  color: black;
+  margin-bottom: 12px;
+}
+
+
+.nodecor:hover {
+  text-decoration: none !important;
+}
+
+.card-user > img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-user h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-user p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-user .card-user-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+
+  i {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-right: 5px;
+    color: $primary;
+  }
+}
+
+.card-user-infos .card-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
