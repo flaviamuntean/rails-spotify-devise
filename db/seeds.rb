@@ -11,12 +11,18 @@ addresses = ['Rua Rodrigues Sampaio 172, Lisboa', 'Rua Escola do Exército 5A, L
 
 p "Adding users"
 
-10.times do
+User.create!(first_name: 'Flavia', last_name: 'Muntean', email: 'flavia@abc.com', password: 'abcd123', bio: Faker::Lorem.paragraphs.join(" "), address: addresses.sample, age: 28)
+User.create!(first_name: 'Bruno', last_name: 'Nery', email: 'bruno@abc.com', password: 'abcd123', bio: Faker::Lorem.paragraphs.join(" "), address: addresses.sample, age: 30)
+User.create!(first_name: 'Tiago', last_name: 'Alexandre Vaz Faria', email: 'tiago@abc.com', password: 'abcd123', bio: Faker::Lorem.paragraphs.join(" "), address: addresses.sample, age: 25)
+User.create!(first_name: 'Pietro', last_name: 'Dalla Vecchia', email: 'pietro@abc.com', password: 'abcd123', bio: Faker::Lorem.paragraphs.join(" "), address: addresses.sample, age: 29)
+
+5.times do
   User.create!(first_name: Faker::Name.unique.first_name, last_name: Faker::Name.unique.last_name, bio: Faker::Lorem.paragraphs.join(" "), address: addresses.sample, email: Faker::Internet.unique.email, password: Faker::Alphanumeric.alphanumeric(number: 10), age: (18..55).to_a.sample)
 end
-User.create!(first_name: 'Flavia', last_name: 'Muntean', email: 'flavia@abc.com', password: 'abcd123', bio: Faker::Lorem.paragraphs.join(" "), address: addresses.sample, age: 28)
-User.create!(first_name: 'Joseph', last_name: 'Lee', email: 'joseph@abc.com', password: 'abcd123', bio: Faker::Lorem.paragraphs.join(" "), address: addresses.sample, age: 25)
 
-users = User.all
+# video_links = ["https://www.youtube.com/watch?v=xJjYIOgs1DA", "https://www.youtube.com/watch?v=nlk5GfvDbzY", "https://www.youtube.com/watch?v=OZCfqhRgJ0Q"]
+
+
+# users = User.all
 
 p "Users added"
