@@ -17,5 +17,8 @@ Rails.application.routes.draw do
   get "/users/:id/bio", to: "users#bio", as: :user_bio
   get "/users/:id/influences", to: "users#influences", as: :user_influences
 
+  resources :conversations do
+    resources :messages
+  end
 
 end
