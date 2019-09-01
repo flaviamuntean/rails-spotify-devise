@@ -5,8 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   devise :omniauthable, omniauth_providers: [:spotify]
 
-  has_many :videos
-  has_many :audios
+  has_many :videos, dependent: :destroy
+  has_many :audios, dependent: :destroy
+
+  has_many :messages
+  has_many :conversations, through: :messages, dependent: :destroy
   # def self.from_omniauth(auth)
   #   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
   #     user.email = auth.info.email
